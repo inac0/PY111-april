@@ -17,16 +17,3 @@ def min_search(arr) -> int:
 			index1 = i
 	return index1
 
-
-
-def min_weight_search(Graph) -> tuple:
-	"""
-	Function that find edge in graph with minimal weight of all
-
-	:param Graph: NetworkX Graph (or digraph) with weighted edges
-	:return: tuple of nodes (node, node) the weight of edge between which is minimal (any occurrence)
-	"""
-	return None, None
-
-
-print(min_search(array))

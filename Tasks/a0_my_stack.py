@@ -2,6 +2,7 @@
 My little Stack
 """
 
+stack = []
 
 def push(elem) -> None:
 	"""

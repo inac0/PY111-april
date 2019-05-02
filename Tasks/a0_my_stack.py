@@ -11,6 +11,7 @@ def push(elem) -> None:
 	:param elem: element to be pushed
 	:return: Nothing
 	"""
+	stack.append(elem)
 	return None
 
 
@@ -20,8 +21,10 @@ def pop():
 
 	:return: popped element
 	"""
-	return None
-
+	try:
+		return stack.pop()
+	except IndexError:
+		print("List is empty")
 
 def peek(ind: int = 0):
 	"""
@@ -30,7 +33,12 @@ def peek(ind: int = 0):
 	:param ind: index of element (count from the top)
 	:return: peeked element
 	"""
-	return None
+	try:
+		return stack[-1 + ind]
+	except IndexError:
+		print("List is Empty")
+	except AssertionError:
+		print("List is out of range")
 
 
 def clear() -> None:
@@ -39,4 +47,5 @@ def clear() -> None:
 
 	:return: None
 	"""
+	stack.clear()
 	return None

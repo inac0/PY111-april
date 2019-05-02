@@ -6,5 +6,16 @@ def binary_search(elem, arr):
 	:param arr: array where element is to be found
 	:return: Index of element if it's presented in the arr, None otherwise
 	"""
+	low = 0
+	high = len(arr)
+	while low <= high:
+		mid = (low + high) // 2
+		print(mid)
+		if arr[mid] == elem:
+			return mid
+		elif arr[mid] < elem:
+			low = mid + 1
+		else:
+			high = mid - 1
 
-	return None
+

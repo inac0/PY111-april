@@ -1,6 +1,7 @@
 """
 Taylor series
 """
+import math
 
 def ex(x) -> float:
 	"""
@@ -9,7 +10,10 @@ def ex(x) -> float:
 	:param x: x value
 	:return: e^x value
 	"""
-	return None
+	value = 1
+	for i in range(1, 10):
+		value += x ** i / math.factorial(i)
+	return value
 
 
 def sinx(x) -> float:
@@ -19,4 +23,9 @@ def sinx(x) -> float:
 	:param x: x value
 	:return: sin(x) value
 	"""
-	return None
+	value = x
+	for i in range(1, 10):
+		value += ((-1)** i) * ( x ** (2 * i + 1) / math.factorial(2 * i + 1))
+	return value
+
+print(sinx(0))

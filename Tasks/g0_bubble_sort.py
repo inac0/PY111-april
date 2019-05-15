@@ -10,4 +10,14 @@ def sort(container: Sequence[_Tt]) -> Sequence[_Tt]:
 	:param container: container of elements to be sorted
 	:return: container sorted in ascending order
 	"""
+
+	for i in range(len(container)-1):
+		swapped = False
+		for j in range(len(container)-i-1):
+			if container[j] > container[j+1]:
+				container[j], container[j+1] = container[j+1], container[j]
+				swapped = True
+		if swapped == False:
+			break
 	return container
+
